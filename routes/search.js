@@ -1,0 +1,11 @@
+var express = require('express');
+var router = express.Router();
+var paisController = require('../controllers/PaisController');
+
+router.get('/', function(req, res, next) {
+    res.render('search', { error:{bad: false}});
+  });
+  
+  router.post('/', paisController.getOne);
+  
+  module.exports = router;

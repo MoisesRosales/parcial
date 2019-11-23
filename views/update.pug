@@ -1,0 +1,48 @@
+extends layout
+
+block content
+  nav(class="navbar navbar-expand-lg navbar-light bg-light")
+    a(class="navbar-brand" href="#") PARCIAL 3 WEB
+    button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation")
+      span(class="navbar-toggler-icon")
+    div(class="collapse navbar-collapse" id="navbarNavAltMarkup")
+      div(class="navbar-nav")
+        a(class="nav-item nav-link active" href="http://localhost:3000/pais") Todos 
+          span(class="sr-only") Todos 
+        a(class="nav-item nav-link active" href="http://localhost:3000/search") Buscar uno 
+          span(class="sr-only") Buscar uno 
+        a(class="nav-item nav-link active" href="http://localhost:3000/insert") Insertar 
+          span(class="sr-only") Insertar 
+        a(class="nav-item nav-link active" href="http://localhost:3000/delete") Eliminar 
+          span(class="sr-only") Eliminar 
+        a(class="nav-item nav-link active" href="http://localhost:3000/update") Actualizar 
+          span(class="sr-only") Actualizar 
+                    
+  br
+  div(class='container')
+    h1 Actualizar Pais
+    br
+    form(method='POST' )
+        div(class='form-group')
+          label(for='codigo_postal') Codigo postal:
+          input#codigo_postal2(type='text', placeholder='codigo postal' name='codigo_postal' class='form-control')
+
+        div(class='form-group')
+          label(for='nombre') Nombre:
+          input#nombre(type='text', placeholder='nombre' name='nombre' class='form-control')
+
+        div(class='form-group')
+          label(for='poblacion_total') Poblacion total:
+          input#poblacion_total(type='text', placeholder='Poblacion total' name='poblacion_total' class='form-control')
+
+        div(class='form-group') 
+          label(for='extension_territorial') Extension Territorial (km):
+          input#extension_territorial(type='text', placeholder='extencion territorial' name='extension_territorial' class='form-control')
+        
+        div(class='form-group')  
+          label(for='capital') Capital:
+          input#capital(type='text', placeholder='capital' name='capital' class='form-control')
+        
+        div(class='form-group')  
+          button#submit_btn2(type='submit' class='btn btn-primary') Insertar
+          script(src='/javascripts/index2.js')

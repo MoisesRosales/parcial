@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  nav(class="navbar navbar-expand-lg navbar-light bg-light")
+    a(class="navbar-brand" href="#") PARCIAL 3 WEB
+    button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation")
+      span(class="navbar-toggler-icon")
+    div(class="collapse navbar-collapse" id="navbarNavAltMarkup")
+      div(class="navbar-nav")
+        a(class="nav-item nav-link active" href="http://localhost:3000/pais") Todos 
+          span(class="sr-only") Todos 
+        a(class="nav-item nav-link active" href="http://localhost:3000/search") Buscar uno 
+          span(class="sr-only") Buscar uno 
+        a(class="nav-item nav-link active" href="http://localhost:3000/insert") Insertar 
+          span(class="sr-only") Insertar 
+        a(class="nav-item nav-link active" href="http://localhost:3000/delete") Eliminar 
+          span(class="sr-only") Eliminar 
+        a(class="nav-item nav-link active" href="http://localhost:3000/update") Actualizar 
+          span(class="sr-only") Actualizar 
+
+  br
+  div(class='container')
+    h1 Eliminar Pais
+    br
+    div(class='form-group')
+      label(for='codigo_postal') Codigo postal:
+      input#codigo(type='text', placeholder='codigo postal' name='codigo_postal' class='form-control')
+    
+    div(class='form-group')  
+      button#submit_btn(type='submit' class="btn btn-danger") Eliminar
+      script(src='/javascripts/index.js')
